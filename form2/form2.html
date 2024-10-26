@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Заказ на товары для кошек</title>
+</head>
+
+<html>
+<body>
+<h3 align="center">Заказ на товары для кошек</h3>
+<form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+    <p><input type="hidden"  name="q" value="search"></p>
+    <p>Имя пользователя: <input type="Text" name="username" size=20  value="Иван"></p>
+    <p>Количество товаров: <input type="number" name="quantity" size=20  value="2"></p>
+    <p>Тип заказа:
+        <input type="Radio" name="food" value="food">Корм
+        <input type="Radio" name="toys" value="toys" checked >Игрушки
+    </p>
+    <p><div>Дополнительные услуги:</div>
+        <div>
+            <input type="Checkbox" name="services" value="grooming" checked>Груминг
+        </div>
+        <div>
+            <input type="Checkbox" name="services" value="walking" checked>Выгул или помощь в ежедневном уходе
+        </div>
+        <div>
+            <input type="Checkbox" name="services" value="caring" checked>Уход за больным животным
+        </div>
+        <div>
+            <input type="Checkbox" name="services" value="supervision" checked>Присмотр на время отсутствия хозяина
+        </div>
+    </p>
+    <p>Дата: <input type="date" name="user_date"  value='2024-10-02'></p>
+    <p>Пароль: <input type="Password" name="password" size=9  value="123"></p>
+
+    <input type="hidden" name="function"  value="page">
+    <input type="hidden" name="page_id"  value="2">
+    
+    <p>
+        <input type="Reset"  name="Reset"  value="Обновить">
+        <input type="Submit" name="submit"  value="Отправить">
+    </p>
+
+</form>
+
+</body>
+</html>
