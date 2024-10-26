@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Решение алгоритмической задачи</title>
+</head>
+<body>
+    <p>Имеются две ёмкости: кубическая с ребром A, цилиндрическая с высотой H и радиусом основания R. Определить, можно ли заполнить жидкостью объёма M первую ёмкость, вторую, обе.</p>
+
+    <form id="UserEnter" action="https://www.bing.com/search" method="GET" target="_blank">
+        <ul>
+            <li\>Для поисковика:<input name="q" value="search"></li>
+            <li>Формулировка задачи:
+                <br><textarea id="task" name="formulation" cols="60" rows="4" readonly>Имеются две ёмкости: кубическая с ребром A, цилиндрическая с высотой H и радиусом основания R. Определить, можно ли заполнить жидкостью объёма M первую ёмкость, вторую, обе.</textarea>
+            </li>
+            <li>Ребро куба (A): <input id="a" name="a" type="number" value="10" required></li>
+            <li>Высота цилиндра (H): <input id="h" name="h" type="number" value="20" required></li>
+            <li>Радиус основания цилиндра (R): <input id="r" name="r" type="number" value="19" required></li>
+            <li>Объём жидкости (M): <input id="m" name="m" type="number" value="21" required></li>
+            <li>Результат решения задачи: <textarea id="result" name="result" rows="4" cols="60" readonly></textarea></li>
+            <li><input id="verify" type="button" value="Проверить"></li>
+            <li><input id="send" type="button" value="Отправить"></li>
+        </ul>
+    </form>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

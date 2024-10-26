@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM_JS. Считываем информацию из DOM</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            color: #007BFF;
+        }
+        #output {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #fff;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Считывание информации из DOM</h1>
+
+<button id="getDataButton">Получить данные</button>
+
+<div id="output"></div>
+
+<h3>Скриншот</h3>
+<img id="screenshot" src="scrin.jpg" alt="Скриншот" style="display: block; max-width: 100%; height: auto;">
+
+<script>
+    document.getElementById('getDataButton').addEventListener('click', function() {
+        // Извлечение данных из localStorage
+        var lastName = localStorage.getItem('lastName');
+        var firstName = localStorage.getItem('firstName');
+        var birthDate = localStorage.getItem('birthDate');
+
+        // Форматирование результатов
+        var outputText = `Фамилия: ${lastName}\nИмя: ${firstName}\nДата рождения: ${birthDate}`;
+
+        // Отображение данных
+        document.getElementById('output').innerText = outputText;
+        
+        // Замените путь к изображению на фактический путь к вашему скриншоту
+        document.getElementById('screenshot').src = 'scrin.jpg'; 
+        document.getElementById('screenshot').style.display = 'block';
+    });
+</script>
+
+</body>
+</html>

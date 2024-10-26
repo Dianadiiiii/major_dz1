@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Решение алгоритмической задачи</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label, input {
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body> 
+    <h1>Решение алгоритмической задачи</h1>
+    <form id="volumeForm">
+        <!-- <p>Ребро куба A: <span id="a">22</span></p> -->
+        <label for="A">Ребро куба (A):</label>
+        <input type="number" id="A" value="10" required>
+        
+        <label for="H">Высота цилиндра (H):</label>
+        <input type="number" id="H" value="10" required>
+        
+        <label for="R">Радиус основания цилиндра (R):</label>
+        <input type="number" id="R" value="10" required>
+        
+        <label for="M">Объём жидкости (M):</label>
+        <input type="number" id="M" value="100" required>
+        
+        <button type="button" onclick="calculate()">Рассчитать</button>
+    </form>
+
+    <h2>Результат:</h2>
+    <div id="result"></div>
+
+    <script>
+        function calculate() {
+            const A = parseFloat(document.getElementById("A").value);
+            const H = parseFloat(document.getElementById("H").value);
+            const R = parseFloat(document.getElementById("R").value);
+            const M = parseFloat(document.getElementById("M").value);
+            
+            const volumeCube = A ** 3;
+            const volumeCylinder = Math.PI * (R ** 2) * H;
+
+            const canFillCube = M <= volumeCube;
+            const canFillCylinder = M <= volumeCylinder;
+            const canFillBoth = M <= (volumeCube + volumeCylinder);
+
+            let resultText = "Можно заполнить:\n";
+            resultText += canFillCube ? "Кубическую ёмкость\n" : "Кубическую ёмкость - Нельзя\n";
+            resultText += canFillCylinder ? "Цилиндрическую ёмкость\n" : "Цилиндрическую ёмкость - Нельзя\n";
+            resultText += canFillBoth ? "Обе ёмкости\n" : "Обе нельзя\n";
+
+            document.getElementById("result").innerText = resultText;
+        }
+    </script>
+</body>
+</html>

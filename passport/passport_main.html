@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Паспортные данные</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Паспорт</h1>
+<div id="main_fon">
+
+    <h5 id="pass_title" class="poiret-one-regular">РОССИЙСКАЯ ФЕДЕРАЦИЯ</h5>
+    <div id="page_top">
+        <p class="vidanstr1">ОТДЕЛОМ ВНУТРЕННИХ ДЕЛ</p>
+        <p class="vidanstr2">ГОР. БУГУЛЬМЫ</p>
+        <p class="vidanstrdata">20.09.2024</p>
+        <p class="vidanstrcode">999-999</p>
+        <img class="podpis" src="podpis1.png">
+        <img class="podpis1" src="podpis.png">
+    </div>
+
+    <div id="page_bottom">
+        <img class="passfoto" src="foto.jpg">
+        <p class="hfamilia">УШКОВА</p>
+        <p class="hname">ДИАНА</p>
+        <p class="hfname">ПЕТРОВНА</p>
+        <p class="hpol">ЖЕН.</p>
+        <p class="hborn">27.08.2005</p>
+        <p class="hpborn1">ГОР. БУГУЛЬМА</p>
+        <p class="hpborn2">БУГУЛЬМИНСКАЯ ОБЛ.</p>
+    </div>
+
+</div>
+
+<script>
+    // Сохранение данных в localStorage при загрузке страницы
+    window.onload = function() {
+        var lastName = document.getElementsByClassName('hfamilia')[0].innerText;
+        var firstName = document.getElementsByClassName('hname')[0].innerText;
+        var birthDate = document.getElementsByClassName('hborn')[0].innerText;
+
+        localStorage.setItem('lastName', lastName);
+        localStorage.setItem('firstName', firstName);
+        localStorage.setItem('birthDate', birthDate);
+    };
+</script>
+
+</body>
+</html>
