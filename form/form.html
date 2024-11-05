@@ -8,6 +8,8 @@
 <html>
 <body>
 <h3 align="center">Форма отправки личных контактных данных. Отправляем данные на сервер</h3>
+/*создание формы: action указывает URL, на который будут отправлены данные при отправке формы */
+/* target="_blank": указывает, что результаты работы формы откроются в новой вкладке */
 <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
     <p><input type="hidden"  name="q" value="search"></p>
     <p>Фамилия: <input type="Text" name="last_name" size=20  value="Петров"></p>
@@ -16,6 +18,7 @@
     <p>Мобильный телефон: <input type="Tel" name="phone" size=20  value="67890876"></p>
     <p>Электронная почта: <input type="email" name="email" size=20  value="dpdpdpdpd@hse.ru"></p>
     <p>Дата отправки сообщения: <input type="date" name="date" size=20  value="30.10.23"></p>
+/* Эти скрытые поля не отображаются пользователю, но отправляются на сервер вместе с остальными данными формы */
     <input type="hidden" name="function"  value="page">
     <input type="hidden" name="page_id"  value="3">
 
