@@ -9,10 +9,14 @@
 
 <body>
 <h1>Форма отправки личных контактных данных. Отправляем данные на сервер</h1>
+/* action="../../cgi-bin/form_api.py": Указывает URL, на который будут отправлены данные формы */
+/* method='get': Метод отправки данных; в этом случае данные будут добавлены к URL в виде параметров запроса */
+/* target='_self': Указывает, что ответ от сервера должен открываться в той же вкладке. (в другой blank) */
 <form action="../../cgi-bin/form_api.py" method='get' target='_self'>
     <p>albumId: <input name="albumId" type="Text" value="1"></p>
     <p>id: <input name="id" type="Text" value="5"></p>
     <p>title: <input name="title" type="Text" value="natus nisi omnis corporis facere molestiae rerum in"></p>
+    /* текстовое поле для ввода URL, со значением по умолчанию, представляющим собой ссылку на изображение */
     <p>url: <input name="url" type="Text" value="https://via.placeholder.com/600/f66b97"></p>
         <input name="function" type="hidden" value="page">
         <input name="page_id" type="hidden" value="3"></p>
