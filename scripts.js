@@ -1,17 +1,19 @@
+/* Объявление переменных */
 let result;
 let check;
 
 function verify() {
     console.log("a, b, c, r, m");
-
+/* Каждая строка получает значение из текстового поля с указанным идентификатором и преобразует его в число с плавающей запятой */
     let a = parseFloat(document.getElementById("a").value);
     let h = parseFloat(document.getElementById("h").value);
     let r = parseFloat(document.getElementById("r").value);
     let m = parseFloat(document.getElementById("m").value);
 
-    const volumeCube = a ** 3;
-    const volumeCylinder = Math.PI * (r ** 2) * h;
+    const volumeCube = a ** 3; /*объем куба*/
+    const volumeCylinder = Math.PI * (r ** 2) * h; /* объем цилиндра */
 
+    /* проверка на заполненность*/
     const canFillCube = m <= volumeCube;
     const canFillCylinder = m <= volumeCylinder;
     const canFillBoth = m <= (volumeCube + volumeCylinder);
@@ -35,7 +37,7 @@ function verify() {
         result = "Вводимые данные некорректны.";
         check = false;
     }
-
+    /* Результат выводится в элементе с идентификатором result */
     document.getElementById("result").value = result;
 
     // Теперь установим результат в качестве значения поля 'q' для передачи
@@ -44,13 +46,14 @@ function verify() {
 
 function send() {
     if (check) {
-        // Добавление дополнительных параметров для отправки
+        // если check истинно, отправляется форма
         document.getElementById("UserEnter").submit();
     } else {
         alert("Есть недостатки. Повторите ввод");
     }
 }
 
-// Установка обработчиков событий
+// Эти строки устанавливают обработчики событий для кнопок с идентификаторами verify и send,
+//чтобы вызывать соответствующие функции при нажатии.
 document.getElementById("verify").addEventListener('click', verify);
 document.getElementById("send").addEventListener('click', send);
